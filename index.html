@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giulia Di Salvo | Supply Chain Management Portfolio</title>
+<meta name="description" content="Portfolio of Giulia Di Salvo, Supply Chain Management major at Rutgers Honors College.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1b1f2a;
+    --paper: #fafaf8;
+    --scarlet: #cc0033;
+    --steel: #566072;
+    --line: #d9dce1;
+    --tint: #f0f1f4;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: var(--scarlet); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Top bar */
+  header.top { border-bottom: 1px solid var(--line); }
+  header.top .wrap {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: .75rem 1.5rem; padding-top: 1rem; padding-bottom: 1rem;
+  }
+  .name { font-family: var(--display); font-weight: 700; font-size: 1.125rem; }
+  nav a { margin-left: 1.25rem; color: var(--ink); text-decoration: none; font-weight: 500; }
+  nav a:hover { color: var(--scarlet); text-decoration: underline; }
+
+  /* Hero: the personal statement is the page's one big moment */
+  .hero { padding: 5rem 0 4rem; }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2rem, 5.2vw, 3.6rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.75rem;
+    max-width: 22em;
+  }
+  .hero .meta { color: var(--steel); margin: 0 0 1.5rem; }
+  .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn {
+    display: inline-block; padding: .65rem 1.2rem; border-radius: 4px;
+    font-weight: 500; text-decoration: none; border: 2px solid var(--ink);
+    color: var(--ink);
+  }
+  .btn.primary { background: var(--ink); color: var(--paper); }
+  .btn:hover { border-color: var(--scarlet); background: var(--scarlet); color: #fff; }
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: 1.75rem; letter-spacing: -0.01em; margin: 0 0 .5rem;
+  }
+  .lede { color: var(--steel); margin: 0 0 2rem; max-width: 40rem; }
+
+  /* Skills */
+  .skill-group + .skill-group { margin-top: 1.75rem; }
+  .skill-group h3 { font-size: 1rem; margin: 0 0 .6rem; font-weight: 500; color: var(--steel); }
+  .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .chips li {
+    padding: .35rem .8rem; border: 1px solid var(--line); background: var(--tint);
+    border-radius: 999px; font-size: .975rem;
+  }
+  .chips.hot li {
+    background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 500;
+  }
+
+  /* Projects: a manifest, one row per project */
+  .project {
+    display: grid; grid-template-columns: 11rem 1fr; gap: 1rem 2.5rem;
+    padding: 2rem 0; border-top: 1px solid var(--line);
+  }
+  .project:first-of-type { border-top: 2px solid var(--ink); }
+  .project .facts { color: var(--steel); font-size: .95rem; }
+  .project .facts strong { display: block; color: var(--ink); font-weight: 500; }
+  .project .facts p { margin: 0 0 .9rem; }
+  .project h3 { font-family: var(--display); font-size: 1.4rem; margin: 0 0 .6rem; line-height: 1.25; }
+  .project p.desc { margin: 0 0 .9rem; max-width: 38rem; }
+  .project ul { margin: 0 0 1rem; padding-left: 1.2rem; max-width: 38rem; }
+  .project li { margin-bottom: .3rem; }
+  .links a { margin-right: 1.25rem; font-weight: 500; }
+
+  /* Contact */
+  .contact p { max-width: 36rem; margin: 0 0 1.25rem; }
+  footer { padding: 2rem 0 3rem; color: var(--steel); font-size: .9rem; border-top: 1px solid var(--line); }
+
+  @media (max-width: 40rem) {
+    .hero { padding: 3rem 0 2.5rem; }
+    .project { grid-template-columns: 1fr; gap: .5rem; }
+    nav a { margin: 0 1rem 0 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="name">Giulia Di Salvo</span>
+    <nav aria-label="Primary">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- PERSONAL STATEMENT -->
+  <div class="hero">
+    <div class="wrap">
+      <p class="meta">Supply Chain Management, Rutgers Honors College &middot; Class of 2028</p>
+      <h1>I'm a supply chain student who pairs operations analytics, finance, and clear communication to turn complex logistics into decisions people can act on.</h1>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="Giulia_DiSalvo_Resume.pdf">Download resume</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="lede">What I can put to work on day one, from supply chain coursework to hands-on tools.</p>
+
+      <div class="skill-group">
+        <h3>Technical</h3>
+        <ul class="chips hot">
+          <li>Java</li>
+          <li>MySQL</li>
+          <li>Excel tracking systems</li>
+          <li>AI tools for marketing content</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Supply chain and business</h3>
+        <ul class="chips hot">
+          <li>Procurement and global sourcing</li>
+          <li>Demand planning and fulfillment</li>
+          <li>Business operations analytics</li>
+          <li>Inventory and merchandising</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Professional</h3>
+        <ul class="chips">
+          <li>Leadership</li>
+          <li>Presentations and judge interviews</li>
+          <li>Grant writing and sponsor relations</li>
+          <li>Budgeting and financial oversight</li>
+          <li>Research on workplace behavior</li>
+          <li>Italian (functional fluency)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="lede">Three projects, each built to solve a specific problem. Replace the link placeholders with your own URLs.</p>
+
+      <article class="project">
+        <div class="facts">
+          <p><strong>Software</strong>Counselor tool</p>
+          <p><strong>Tools</strong>Java, MySQL</p>
+        </div>
+        <div>
+          <h3>Graduation Requirement Tracker for Guidance Counselors</h3>
+          <p class="desc">An app that tracks the classes each student has completed against the school's graduation requirements, so counselors can see at a glance who is on track and what is still missing.</p>
+          <ul>
+            <li>Compares each student's completed courses with required credits by subject.</li>
+            <li>Flags unmet requirements so counselors can plan schedules earlier.</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/YOUR-USERNAME/graduation-tracker">View code</a>
+            <a href="https://YOUR-USERNAME.github.io/graduation-tracker">Live demo</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="facts">
+          <p><strong>Finance and operations</strong>FIRST Robotics Team 1676</p>
+          <p><strong>Tools</strong>Excel</p>
+        </div>
+        <div>
+          <h3>Excel Financial Tracking System</h3>
+          <p class="desc">A tracking system I built as Finance Subdivision Lead to give the team clearer oversight of purchases, events, and budgets.</p>
+          <ul>
+            <li>Organized purchase and event data in one place for the whole team.</li>
+            <li>Supported fundraising of $80,000+ per year from sponsors including NBC Universal, BAE Systems, and Pfizer.</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/YOUR-USERNAME/team-1676-finance-tracker">View files</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="facts">
+          <p><strong>Retail and e-commerce</strong>Joy Silver, Romania</p>
+          <p><strong>Tools</strong>AI video and design software</p>
+        </div>
+        <div>
+          <h3>Jewelry Merchandising and Promotion Campaigns</h3>
+          <p class="desc">Volunteer work for a jewelry retailer, covering which new supplier inventory to stock and how to promote it in stores and online.</p>
+          <ul>
+            <li>Reviewed supplier inventory and helped select the store assortment.</li>
+            <li>Co-developed promotional videos and social media campaigns with the company's marketing professional.</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/YOUR-USERNAME/joy-silver-campaigns">View samples</a>
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>I'm looking for supply chain internships and research opportunities. The best way to reach me is email.</p>
+      <p><a href="mailto:gd561@scarletmail.rutgers.edu">gd561@scarletmail.rutgers.edu</a></p>
+      <p><a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a> &nbsp; <a href="https://github.com/YOUR-USERNAME">GitHub</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Giulia Di Salvo &middot; Montvale, NJ</div>
+</footer>
+
+</body>
+</html>
